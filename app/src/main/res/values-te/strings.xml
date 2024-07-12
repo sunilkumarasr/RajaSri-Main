@@ -1,0 +1,217 @@
+<resources>
+    <string name="app_name">RajaSri</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit_profile">ప్రొఫైల్‌ను నవీకరించండి</string>
+    <string name="notifications">నోటిఫికేషన్‌లు</string>
+    <string name="privacy_policy">గోప్యతా విధానం</string>
+    <string name="terms_and_conditions">నిబంధనలు మరియు షరతులు</string>
+    <string name="about_us">మా గురించి</string>
+    <string name="contact_us">మమ్మల్ని సంప్రదించండి</string>
+    <string name="support">మద్దతు</string>
+    <string name="transaction_history">లావాదేవీల చరిత్ర</string>
+    <string name="transaction_details">లావాదేవీల వివరాలు</string>
+    <string name="view_details">వివరాలను వీక్షించండి</string>
+    <string name="loan_details">రుణ వివరాలు</string>
+    <string name="by_continuing_you_agree_to_our_terms_of_service_and_privacy_policy">కొనసాగించడం ద్వారా మీరు మా <font fgcolor='#53B175'>సేవా నిబంధనలు</font> అంగీకరిస్తున్నారు</string>
+    <string name="privacy_policy_sign">మరియు <font fgcolor='#53B175'>గోప్యతా విధానం</font> </string>
+    <string name="dont_have_an_account_sign_in">ఖాతా లేదా? <font fgcolor='#53B175'>సైన్ అప్</font> చేయండి</string>
+    <string name="already_have_an_account_sign_in">ఖాతా కలిగి ఉన్నారా?  <font fgcolor='#53B175'>సైన్ ఇన్</font> చేయండి</string>
+    <string name="contact_us_description">సహాయం కావాలా? మేము మీ వెనుకకు వచ్చాము! రాజశ్రీ టౌన్‌షిప్‌లలో మీకు ఏవైనా సమస్యలు ఎదురైతే <font fgcolor='#046938'>info@rajatownship.com</font> కు మాకు లైన్ పంపండి</string>
+    <string name="about_us_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </string>
+    <string name="agreement">ఒప్పందం</string>
+    <string name="clear_pad">క్లియర్</string>
+    <string name="save_signature">సేవ్</string>
+    <string name="SignaturePending">సంతకం పెండింగ్‌లో ఉంది</string>
+    <string name="add_your_signature">మీ సంతకాన్ని జోడించండి</string>
+    <string name="success_payment_note">మీరు త్వరలో హోమ్ పేజీకి దారి మళ్లించబడతారు లేదా ఇంటి వయస్సుకి తిరిగి రావడానికి ఇక్కడ క్లిక్ చేయండి</string>
+    <string name="availbel_plots">అందుబాటులో ఉన్న ప్లాట్లు</string>
+    <string name="booked_plots">బుక్ చేసుకున్న ప్లాట్లు</string>
+    <string name="availbelability">లభ్యత</string>
+    <string name="booking_id">బుకింగ్ ఐడి</string>
+    <string name="customer_name">వినియోగదారుని పేరు</string>
+    <string name="customer_mobile_num">కస్టమర్ మొబైల్</string>
+    <string name="plot_no">ప్లాట్ నెం</string>
+    <string name="plot_facing">ప్లాట్ ఫేసింగ్</string>
+    <string name="plot_flat_uds">ప్లాట్/ఫ్లాట్ UDS</string>
+    <string name="plot_flat_area">ప్లాట్/ఫ్లాట్ ఏరియా</string>
+    <string name="plot_status">ప్లాట్ స్థితి</string>
+    <string name="paid_amount">కట్టిన సొమ్ము</string>
+    <string name="due_amount">బకాయి మొత్తం</string>
+    <string name="enquiery_now">ఇప్పుడు విచారణ</string>
+    <string name="how_much_you_invest">మీరు ఎంత పెట్టుబడి పెట్టాలనుకుంటున్నారు?</string>
+    <string name="send_enquiry">విచారణ పంపండి</string>
+    <string name="no_plots_available">ప్లాట్లు అందుబాటులో లేవు</string>
+    <string name="email_id">ఇమెయిల్ ఐడి</string>
+    <string name="property_details">ఆస్తి వివరాలు</string>
+    <string name="brochure">కరపత్రం</string>
+    <string name="features">లక్షణాలు</string>
+    <string name="aminities">సౌకర్యాలు</string>
+    <string name="gallery">గ్యాలరీ</string>
+    <string name="video">వీడియో</string>
+    <string name="no_videos_available">వీడియోలు ఏవీ అందుబాటులో లేవు</string>
+    <string name="location">స్థానం</string>
+    <string name="incase_any_quries">ఏదైనా ప్రశ్న విషయంలో దయచేసి మమ్మల్ని సంప్రదించడానికి సంకోచించకండి</string>
+    <string name="fullname">పూర్తి పేరు:</string>
+    <string name="full_name">పూర్తి పేరు</string>
+    <string name="phone_number">ఫోను నంబరు</string>
+    <string name="address">చిరునామా</string>
+    <string name="update">నవీకరించు</string>
+    <string name="home">హోమ్</string>
+    <string name="my_properties">నా ప్లాట్లు</string>
+    <string name="bilings">బిల్లింగ్స్</string>
+    <string name="account">ఖాతా</string>
+    <string name="plot_bakn_loan_details">ప్లాట్ బ్యాంక్ లోన్ వివరాలు</string>
+    <string name="venture_name">వెంచర్ పేరు : </string>
+    <string name="price">ధర : </string>
+    <string name="open_plot_size">ప్లాట్ పరిమాణం : </string>
+    <string name="emi">ఇఎమ్ఐ : </string>
+    <string name="emi_date">EMI తేదీ : </string>
+    <string name="emi_months">EMI నెలల : </string>
+    <string name="loan_number">రుణ సంఖ్య : </string>
+    <string name="description">వివరణ</string>
+    <string name="emi_details">ఇఎమ్ఐ వివరాలు</string>
+    <string name="s_no">స.నెం</string>
+    <string name="emi_amount">ఇఎమ్ఐ సొమ్ము</string>
+    <string name="date">తేదీ</string>
+    <string name="status">స్థితి</string>
+    <string name="details">వివరాలు</string>
+    <string name="paid">చెల్లించారు</string>
+    <string name="sign_in">సైన్ ఇన్ </string>
+    <string name="welcom_back_signin">పునఃస్వాగతం! ప్రారంభిద్దాం.</string>
+    <string name="login">ప్రవేశించండి</string>
+    <string name="enter_4_digit_code">మీ 4-అంకెల కోడ్‌ని నమోదు చేయండి</string>
+    <string name="please_enter_otp_sent_to">దయచేసి మీ ఖాతాను ధృవీకరించడానికి OTPని నమోదు చేయండి</string>
+    <string name="resend">మళ్ళీ కోడ్ పంపు</string>
+    <string name="pending_properties">పెండింగ్‌లో ఉన్న ఆస్తులు</string>
+    <string name="plot_details">ప్లాట్ వివరాలు</string>
+    <string name="total_amount">మొత్తం సొమ్ము: </string>
+    <string name="paid_amount_">కట్టిన సొమ్ము : </string>
+    <string name="emi_amount_">ఇఎమ్ఐ సొమ్ము : </string>
+    <string name="location_">స్థానం : </string>
+    <string name="plot_registration_name">ప్లాట్ రెజి పేరు : </string>
+    <string name="facing_">ముఖం : </string>
+    <string name="create_your_account">మీ ఖాతాను సృష్టించండి</string>
+    <string name="your_key_finding">ఖచ్చితమైన ఆస్తిని కనుగొనడంలో మీ కీ వేచి ఉంది! ప్రారంభించడానికి ఖాతాను సృష్టించండి</string>
+    <string name="fathername">తండ్రి పేరు</string>
+    <string name="select_dob">పుట్టిన తేదీని ఎంచుకోండి</string>
+    <string name="age">వయస్సు</string>
+    <string name="aadhar">ఆధార్</string>
+    <string name="country">దేశం</string>
+    <string name="city">నగరం</string>
+    <string name="pincode">పిన్ కోడ్</string>
+    <string name="passbook_no">పాస్‌బుక్ నంబర్</string>
+    <string name="groupname">కూటమి పేరు</string>
+    <string name="mobile_number">మొబైల్ నంబర్</string>
+    <string name="altername_mobile_no">ప్రత్యామ్నాయ మొబైల్ నంబర్</string>
+    <string name="password">పాస్వర్డ్</string>
+    <string name="nominee_name">నామినీ పేరు</string>
+    <string name="occupation">వృత్తి</string>
+    <string name="primary_address">ప్రాథమిక చిరునామా</string>
+    <string name="secondary_address">ద్వితీయ చిరునామా</string>
+    <string name="emp_id">ఉద్యోగి ఐడి</string>
+    <string name="upload_photo">ఫోటోన అప్‌లోడ్ </string>
+    <string name="register">నమోదు చేసుకోండి</string>
+    <string name="fullname_">పూర్తి పేరు</string>
+    <string name="subject">విషయం</string>
+    <string name="comment">వ్యాఖ్య</string>
+    <string name="submit">సమర్పించండి</string>
+    <string name="transaction_id">లావాదేవి ఐడి: </string>
+    <string name="unpaid">చెల్లించని</string>
+    <string name="logout">లాగ్అవుట్</string>
+    <string name="emi_">ఇఎమ్ఐ</string>
+    <string name="invoice">ఇన్వాయిస్</string>
+        <string name="hey">హే,</string>
+    <string name="welcome_to_rajasri">రాజశ్రీ టౌన్‌షిప్‌లకు స్వాగతం</string>
+    <string name="search_venture_name">వెంచర్ పేరును శోధించండి</string>
+    <string name="available_projects">అందుబాటులో ఉన్న ప్రాజెక్ట్‌లు</string>
+    <string name="already_bought_projects">మీరు ఇప్పటికే ప్రాజెక్ట్‌లను కొనుగోలు చేసారు</string>
+    <string name="no_data_found">డేటా ఏదీ కనుగొనబడలేదు</string>
+    <string name="view_all">అన్నీ వీక్షించండి</string>
+    <string name="venture_name_">వెంచర్ పేరు</string>
+    <string name="loan_month">రుణ నెల</string>
+    <string name="no_paid_transactions_found">చెల్లింపు లావాదేవీలు ఏవీ కనుగొనబడలేదు</string>
+    <string name="no_unpaid_transactions_found">చెల్లించని లావాదేవీలు ఏవీ కనుగొనబడలేదు</string>
+    <string name="search_results_not_found">శోధించిన ఫలితం కనుగొనబడలేదు</string>
+    <string name="recipt">రసీదు</string>
+    <string name="pay">చెల్లించండి</string>
+    <string name="booked">బుక్ చేసుకున్నారు</string>
+    <string name="availbelable">అందుబాటులో ఉంది</string>
+    <string name="download_agreement">ఒప్పందాన్ని డౌన్‌లోడ్</string>
+    <string name="download">డౌన్‌లోడ్</string>
+    <string name="choose_language">మీ భాషను ఎంచుకోండి</string>
+    <string name="english">ఆంగ్ల</string>
+    <string name="telugu">తెలుగు</string>
+    <string name="check_internet">దయచేసి ఇంటర్నెట్ కనెక్షన్‌ని తనిఖీ చేయండి</string>
+    <string name="brocher_not_attached">బ్రోచర్ జతచేయబడలేదు</string>
+    <string name="no_media_selected">మీడియా ఏదీ ఎంచుకోబడలేదు</string>
+    <string name="agreement_not_attached">ఒప్పందం జోడించబడలేదు</string>
+    <string name="please_sign_agreement">దయచేసి ఒప్పందంపై సంతకం చేయండి</string>
+    <string name="please_fill_all_details">దయచేసి అన్ని వివరాలను పూరించండి</string>
+    <string name="receipt_not_attached">రసీదు జతచేయబడలేదు</string>
+    <string name="enter_valid_number">దయచేసి చెల్లుబాటు అయ్యే మొబైల్ నంబర్‌ని నమోదు చేయండి</string>
+    <string name="enter_valid_otp">దయచేసి చెల్లుబాటు అయ్యే otpని నమోదు చేయండి</string>
+    <string name="enter_father_name">దయచేసి, తండ్రి పేరును నమోదు చేయండి</string>
+    <string name="enter_age">దయచేసి వయస్సుని నమోదు చేయండి</string>
+    <string name="otp_verify_account">దయచేసి మీ ఖాతాను ధృవీకరించడానికి OTPని నమోదు చేయండి</string>
+    <string name="view_agrement">ఒప్పందాన్ని వీక్షించండి</string>
+    <string name="accept_terms_conditions">దయచేసి మా నిబంధనలు మరియు షరతులను అంగీకరించండి</string>
+    <string name="pay_amount">సొమ్ము వివరాలు</string>
+    <string name="advance_amount">అడ్వాన్స్ సొమ్ము :</string>
+
+    <string name="application_amount">అప్లికేషన్ సొమ్ము :</string>
+    <string name="payment_failed">చెల్లింపు విఫలమైంది</string>
+    <string name="try_again">మళ్లీ ప్రయత్నించండి</string>
+    <string name="nominee_relation">సంబంధం</string>
+    <string name="enter_valid_name">సరియైన పేరు నమోదు చేయండి</string>
+    <string name="enter_valid_fathername">సరైన తండ్రి పేరును నమోదు చేయండి</string>
+    <string name="enter_dob">పుట్టిన తేదీని నమోదు చేయండి</string>
+    <string name="enter_valid_aadhar">ఆధార్ నంబర్‌ను నమోదు చేయండి</string>
+    <string name="enter_email">సరైన ఇమెయిల్ ఐడిని నమోదు చేయండి</string>
+    <string name="enter_country_name">దేశం పేరు నమోదు చేయండి</string>
+    <string name="enter_city_name">నగరం పేరును నమోదు చేయండి</string>
+    <string name="enter_pincode">పిన్‌కోడ్‌ని నమోదు చేయండి</string>
+    <string name="enter_group_name">సమూహం పేరు నమోదు చేయండి</string>
+    <string name="enter_location">స్థానాన్ని నమోదు చేయండి</string>
+    <string name="enter_password">పాస్‌వర్డ్‌ని నమోదు చేయండి</string>
+    <string name="enter_nominee_name">నామినీ పేరును నమోదు చేయండి</string>
+    <string name="enter_relation">సంబంధాన్ని నమోదు చేయండి</string>
+    <string name="enter_occupation">వృత్తిని నమోదు చేయండి</string>
+    <string name="enter_primary_address">ప్రాథమిక చిరునామాను నమోదు చేయండి</string>
+    <string name="enter_secondary_address">ద్వితీయ చిరునామాను నమోదు చేయండి</string>
+    <string name="please_accecpt_terms">దయచేసి మా నిబంధనలు మరియు షరతులను అంగీకరించండి</string>
+    <string name="are_you_sure_logout">మీరు ఖచ్చితంగా లాగ్ అవుట్ చేయాలనుకుంటున్నారా?</string>
+    <string name="cancel">రద్దు చేయండి</string>
+    <string name="yes">అవును</string>
+
+    <string-array name="RelationList">
+        <item>శ్రీ.</item>
+        <item>కుమారి.</item>
+        <item>శ్రీమతి.</item>
+        <item>డా.</item>
+        <item>ప్రొ.</item>
+    </string-array>
+
+    <string-array name="array_plot_types">
+        <item>అన్నీ</item>
+        <item>తూర్పు</item>
+        <item>వెస్ట్</item>
+        <item>ఉత్తరం</item>
+        <item>దక్షిణ</item>
+        <item>తూర్పు మూల</item>
+        <item>వెస్ట్ కార్నర్</item>
+        <item>నార్త్ కార్నర్</item>
+        <item>సౌత్ కార్నర్</item>
+    </string-array>
+    <string-array name="array_plot_types_">
+        <item>All</item>
+        <item>East</item>
+        <item>West</item>
+        <item>North</item>
+        <item>South</item>
+        <item>EastC</item>
+        <item>WestC</item>
+        <item>NorthC</item>
+        <item>SouthC</item>
+    </string-array>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/myPropertiesFragment"
+        android:icon="@drawable/ic_my_properties"
+        android:title="@string/my_properties"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/buildingsFragment"
+        android:icon="@drawable/ic_buildings"
+        android:title="@string/bilings"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/accountFragment"
+        android:icon="@drawable/ic_account"
+        android:title="@string/account"
+        app:showAsAction="always" />
+
+</menu>

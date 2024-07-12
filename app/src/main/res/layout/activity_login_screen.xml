@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.authentication.LoginScreen">
+
+        <FrameLayout
+            android:id="@+id/bannerFL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_200sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/login" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bannerFL">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/sign_in"
+                    android:fontFamily="sans-serif"
+                    android:textColor="#1F4C6B"
+                    android:textSize="@dimen/_18ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcom_back_signin"
+                    android:textColor="#252B5C"
+                    android:fontFamily="sans-serif"
+                    android:textSize="@dimen/_14sdp" />
+
+            </LinearLayout>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="horizontal"
+                app:cardBackgroundColor="#F5F4F8"
+                app:strokeColor="#F5F4F8">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_phone_call" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:id="@+id/phoneNumberET"
+                        android:hint="@string/phone_number"
+                        android:maxLength="10"
+                        android:inputType="phone"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_2sdp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loginBT"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:background="@drawable/button_bg_red_color_corners"
+                android:text="@string/login"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/loginTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:text="@string/dont_have_an_account_sign_in"
+                android:textColor="#686868"
+                android:textSize="@dimen/_12ssp" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

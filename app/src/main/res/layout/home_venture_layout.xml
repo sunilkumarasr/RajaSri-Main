@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#F5F4F8"
+        app:cardCornerRadius="1dp"
+        app:strokeColor="#F5F4F8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#F5F4F8"
+                app:cardCornerRadius="0dp"
+                app:strokeColor="#F5F4F8">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/bannerIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/venture_image_png" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                >
+
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="sans-serif"
+                android:maxLines="1"
+                tools:text="Greater Global "
+                android:textColor="#234F68"
+                android:textSize="@dimen/_14ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_location_png" />
+
+                <TextView
+                    android:id="@+id/addressTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="sans-serif"
+                    android:maxLines="1"
+                    tools:text="Kadthal, Hyderabad "
+                    android:textColor="#234F68"
+                    android:textSize="@dimen/_10ssp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/yardsTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                tools:text="000"
+                android:textColor="#234F68" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/viewDetailsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="sans-serif"
+                android:text="@string/view_details"
+                android:textColor="#F80C00" />
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

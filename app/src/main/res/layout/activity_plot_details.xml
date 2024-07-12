@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.activities.PlotDetailsActivity">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_5sdp">
+
+            <include
+                android:id="@+id/includedHeaderLL"
+                layout="@layout/general_tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:headerTitleText="@{@string/view_details}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F7EAD2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/bannerLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/bannerIV"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:foreground="@drawable/details_page_back_corners"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/venture_image_png" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/titleTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_18ssp"
+                                tools:text="Aliens Hub" />
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mCV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="#FFF"
+                    app:cardCornerRadius="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bannerLL"
+                    app:strokeColor="#FFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#D9D9D9"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+
+                            android:text="@string/plot_details"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="end"
+                                    android:text="@string/venture_name"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+                                    android:id="@+id/ventureNameTV"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:textColor="#252B5C"
+                                    android:textSize="@dimen/_12ssp"
+                                    tools:text="Aliens Hub" />
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="end"
+                                    android:text="@string/total_amount"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+                                    android:id="@+id/priceTV"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:textColor="#252B5C"
+                                    android:textSize="@dimen/_12ssp"
+                                    tools:text="₹ 40 Lac " />
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp" />
+
+                            <LinearLayout
+                                android:id="@+id/lnr_paid"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="end"
+                                    android:text="@string/paid_amount_"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+                                    android:id="@+id/txt_paid"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:textColor="#252B5C"
+                                    android:textSize="@dimen/_12ssp"
+                                    tools:text="₹ 40 Lac " />
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp" />
+
+                            <LinearLayout
+                                android:id="@+id/lnr_emi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="end"
+                                    android:text="@string/emi_amount_"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+                                    android:id="@+id/txt_emi"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:textColor="#252B5C"
+                                    android:textSize="@dimen/_12ssp"
+                                    tools:text="₹ 40 Lac " />
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="end"
+                                    android:text="@string/open_plot_size"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+                                    android:id="@+id/plotSizeTV"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:textColor="#252B5C"
+                                    android:textSize="@dimen/_12ssp"
+                                    tools:text="147" />
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="end"
+                                    android:text="@string/location_"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+                                    android:id="@+id/locationTV"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:textColor="#252B5C"
+                                    android:textSize="@dimen/_12ssp"
+                                    tools:text="Hyderabad" />
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="end"
+                                    android:text="@string/plot_registration_name"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+                                    android:id="@+id/plotRegTV"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:textColor="#252B5C"
+                                    android:textSize="@dimen/_12ssp"
+                                    tools:text="Ramu" />
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="end"
+                                    android:text="@string/facing_"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+                                    android:id="@+id/txt_facing"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="start"
+                                    android:textColor="#252B5C"
+                                    android:textSize="@dimen/_12ssp"
+                                    tools:text="Ramu" />
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    app:cardCornerRadius="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif"
+                            android:gravity="end"
+                            android:text="@string/description"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/descriptionTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:textColor="@color/text_sub_color"
+                            android:textSize="@dimen/_10ssp"
+                            tools:text="" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview_signature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_16sdp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:contentPadding="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mCV">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        tools:context=".ViewActivity">
+
+
+                        <LinearLayout
+                            android:id="@+id/signature_pad_container"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/buttons_container"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/signature_pad_description"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="16dp"
+                                android:text="@string/add_your_signature"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="@dimen/_18sdp"
+                                android:textStyle="bold" />
+
+                            <se.warting.signatureview.views.SignaturePad
+                                android:id="@+id/signature_pad"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_80sdp"
+                                app:clearOnDoubleClick="true" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dp"
+                                android:layout_above="@+id/signature_pad_description"
+                                android:layout_marginBottom="8dp"
+                                android:background="@android:color/darker_gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/buttons_container"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dp">
+
+                            <Button
+                                android:id="@+id/clear_button"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:text="@string/clear_pad" />
+
+                            <Button
+                                android:id="@+id/save_button"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:text="@string/save_signature" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/txt_terms_condition"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/termscheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layoutDirection="ltr"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/flexboxLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        app:flexDirection="column">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_terms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="sans-serif"
+                            android:text="@string/by_continuing_you_agree_to_our_terms_of_service_and_privacy_policy"
+                            android:textColor="#686868"
+
+                            android:textSize="@dimen/_10ssp" />
+
+
+                    </com.google.android.flexbox.FlexboxLayout>
+                </LinearLayout>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_vew_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#F80C00"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:strokeColor="#F80C00">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:gravity="center"
+
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_4sdp"
+                            android:fontFamily="sans-serif"
+                            android:text="@string/view_agrement"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_4sdp"
+                            android:src="@drawable/file_download_24"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

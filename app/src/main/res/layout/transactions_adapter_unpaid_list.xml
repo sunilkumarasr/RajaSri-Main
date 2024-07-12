@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_width="match_parent"
+            app:dividerColor="#DDD"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+            android:paddingVertical="@dimen/_2sdp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txt_s_no"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/s_no"
+                android:textSize="@dimen/_10ssp" />
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="1dp"
+                app:dividerColor="#DDD"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/ventureNameTV"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                tools:text="Greater Global "
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="1dp"
+                app:dividerColor="#DDD"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/emiPriceTV"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                tools:text="₹2,020/-"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="1dp"
+                app:dividerColor="#DDD"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/emiDateTV"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/black"
+                tools:text="18-08-23"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="1dp"
+                app:dividerColor="#DDD"
+                android:layout_height="match_parent" />
+
+
+
+            <RelativeLayout
+                android:id="@+id/relativeUnpaid"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:background="@drawable/unpaid_round_edge"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_marginStart="@dimen/_3sdp">
+                <TextView
+                    android:id="@+id/statusTV"
+                    android:textSize="@dimen/_9ssp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white"
+                    tools:text="@string/pay"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:ellipsize="middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_width="match_parent"
+            app:dividerColor="#DDD"
+            android:layout_height="1dp" />
+
+    </LinearLayout>
+
+</layout>

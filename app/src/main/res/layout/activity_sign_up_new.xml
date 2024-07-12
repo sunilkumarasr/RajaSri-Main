@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.authentication.SignUpNewActivity">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/signup_banner_png" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/create_your_account"
+                    android:textColor="#234F68"
+                    android:textSize="@dimen/_18ssp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/your_key_finding"
+                    android:textColor="#686868"
+                    android:textSize="@dimen/_11sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/spinner"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp"
+                                android:textSize="@dimen/_13sdp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/fullNameET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/fullname"
+                                android:inputType="text"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:singleLine="true" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_profile_png" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/fatherNameET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/fathername"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_profile_png" />
+
+                            <TextView
+                                android:id="@+id/tvDOB"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/select_dob"
+                                android:inputType="text"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:textSize="@dimen/_14sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_profile_png" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ageNameET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/age"
+                                android:imeOptions="actionNext"
+                                android:inputType="phone"
+                                android:maxLength="2"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_profile_png" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/aadhaarNameET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/aadhar"
+                                android:imeOptions="actionNext"
+                                android:inputType="phone"
+                                android:maxLength="12"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_email_png" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/ed_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/email_id"
+                                android:imeOptions="actionNext"
+                                android:inputType="textEmailAddress"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="20dp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:src="@drawable/ic_location_png" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/countryNameET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/country"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="20dp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:src="@drawable/ic_location_png" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/cityNameET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/city"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_profile_png" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/pinCodeET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/pincode"
+                                android:imeOptions="actionNext"
+                                android:inputType="phone"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_profile_png" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/passBookNumberET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/passbook_no"
+                                android:imeOptions="actionNext"
+                                android:inputType="phone"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_profile_png" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/groupNameET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/groupname"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:lines="1"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_phone_call" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/phoneNumberET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/mobile_number"
+                                android:imeOptions="actionNext"
+                                android:inputType="phone"
+                                android:maxLength="10"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_phone_call" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/alternatephoneNumberET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/altername_mobile_no"
+                                android:imeOptions="actionNext"
+                                android:inputType="phone"
+                                android:maxLength="10"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="20dp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:src="@drawable/ic_location_png" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/locationEd"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/location"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:paddingHorizontal="@dimen/_10sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_password_png" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="@dimen/_250sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColorHint="@color/black"
+                                app:boxStrokeWidth="0dp"
+                                app:boxStrokeWidthFocused="0dp"
+                                app:passwordToggleDrawable="@drawable/show_password_drawable"
+                                app:passwordToggleEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/ed_password"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@null"
+                                    android:fontFamily="sans-serif"
+                                    android:hint="@string/password"
+                                    android:inputType="textPassword"
+                                    android:paddingHorizontal="@dimen/_10sdp"
+                                    android:paddingVertical="@dimen/_2sdp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_eye_visibility_off"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_profile_png" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/nomineeNameET"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/nominee_name"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:lines="1"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_profile_png" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/nomineeRelationship"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/nominee_relation"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:lines="1"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_profile_png" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/occuptionET"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/occupation"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/primaryAddressET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/primary_address"
+                                android:maxLines="4"
+                                android:minLines="3"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/secondryAddressET"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/secondary_address"
+                                android:maxLines="4"
+                                android:minLines="3"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:id="@+id/lnr_emp_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_stroke"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_5sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+
+                                style="@style/text_names_values"
+                                android:text="EMP ID" />
+
+                            <TextView
+                                style="@style/text_names_values"
+
+                                android:text="Name" />
+
+                            <TextView
+                                style="@style/text_names_values"
+
+                                android:text="Designation" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/grey_font" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_empid"
+                                style="@style/text_names_values"
+                                android:text="#RTS117" />
+
+                            <TextView
+                                android:id="@+id/txt_name"
+                                style="@style/text_names_values"
+                                android:text="Rahula" />
+
+                            <TextView
+                                android:id="@+id/txt_designation"
+                                style="@style/text_names_values"
+                                android:text="EMployee" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="#F5F4F8"
+                        app:strokeColor="#F5F4F8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_profile_png" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/empId"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:hint="#RTS"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_2sdp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/uploadImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        app:cardBackgroundColor="@color/grey_font"
+                        app:strokeColor="@color/grey_font">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:padding="@dimen/_10sdp"
+                                android:text="@string/upload_photo"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_16ssp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/file_download_24" />
+
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <TextView
+                        android:id="@+id/txtfileName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="sans-serif"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/termscheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layoutDirection="ltr"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/flexboxLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        app:flexDirection="column">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_terms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="sans-serif"
+                            android:text="@string/by_continuing_you_agree_to_our_terms_of_service_and_privacy_policy"
+                            android:textColor="#686868"
+
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_privacy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="@string/privacy_policy_sign"
+                            android:textColor="#686868"
+                            android:textSize="@dimen/_10ssp" />
+                    </com.google.android.flexbox.FlexboxLayout>
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/registerCV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    app:cardBackgroundColor="#F80C00"
+                    app:strokeColor="#F80C00">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/register"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_16ssp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/loginTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_25sdp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="@string/already_have_an_account_sign_in"
+                    android:textColor="#686868"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

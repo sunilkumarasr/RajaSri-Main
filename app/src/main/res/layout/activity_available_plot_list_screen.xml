@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.plots.AvailablePlotListScreen">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/plots_bg"
+            android:scaleType="centerCrop"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#B7959393"
+            >
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:elevation="@dimen/_5sdp"
+        >
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:visibility="visible"
+                android:id="@+id/backButtonIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/arrow_back_ios_24" />
+
+            <TextView
+                android:id="@+id/headerTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:text="@string/property_details"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textSize="@dimen/_18ssp" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            android:layout_marginVertical="@dimen/_16sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    >
+                    <ImageView
+                        android:layout_width="@dimen/_14sdp"
+                        android:layout_height="@dimen/_14sdp"
+                        android:layout_margin="@dimen/_5sdp"
+
+                        android:background="@color/green"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/availbel_plots"
+                        android:fontFamily="sans-serif"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_14sdp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    >
+                    <ImageView
+                        android:layout_width="@dimen/_14sdp"
+                        android:layout_height="@dimen/_14sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:background="@color/red"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/booked_plots"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_14sdp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_spinner_bg"
+                >
+                <Spinner
+                    android:id="@+id/spinner_plot_types"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_32sdp"
+                    android:background="@color/grey_spinner_bg"
+                    android:paddingHorizontal="@dimen/_16sdp"
+                    android:paddingVertical="@dimen/_8sdp"
+                    android:entries="@array/array_plot_types"
+                    />
+
+                <ImageView
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/arrow_back_ios_24"
+                    android:rotation="270"
+                    android:layout_marginRight="@dimen/_16sdp"
+
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_no_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/no_plots_available"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_plots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                app:spanCount="5"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                />
+
+        </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

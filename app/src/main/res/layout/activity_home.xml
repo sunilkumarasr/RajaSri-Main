@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.dashboard.HomeActivity">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/toolbarCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/white">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_home_screen_logo_png" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/frame_notification"
+                        android:layout_width="@dimen/_36sdp"
+                        android:layout_height="@dimen/_36sdp"
+                        android:visibility="visible"
+
+                        android:layout_gravity="center_vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_notification_bg" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_notifications_outline" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:visibility="visible"
+                        android:layout_marginStart="@dimen/_8sdp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profileIMG"
+                            android:layout_width="@dimen/_36sdp"
+                            android:layout_height="@dimen/_36sdp"
+
+                            app:civ_border_width="1dp"
+                            android:padding="@dimen/_2sdp"
+                            android:layout_gravity="center"
+                            app:civ_border_color="#F13E3E"/>
+                       <!-- <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_32sdp"
+                            android:layout_gravity="center"
+
+                            android:id="@+id/profileIMG"
+                            android:src="@drawable/baseline_image_24" />-->
+                    </FrameLayout>
+                </LinearLayout>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host_fragment_activity_home"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@id/bottomNav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbarCV"
+            app:navGraph="@navigation/bottom_nav_graph" />
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:itemIconTint="@color/bottom_bar_selection"
+            app:itemTextColor="@color/bottom_nav_text_color"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

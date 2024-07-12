@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="color_F80C00">#F80C00</color>
+    <color name="color_FB4E45">#FB4E45</color>
+    <color name="colorAppPrimary">#7f5700</color>
+    <color name="title_background">#C3FAFAFA</color>
+    <color name="divider">#D2D2D2</color>
+    <color name="text_sub_color">#3A3939</color>
+    <color name="trance">#00000000</color>
+    <color name="trans_title">#C3979696</color>
+    <color name="splash_color">#031142</color>
+    <color name="green">#048E09</color>
+    <color name="red">#F80C00</color>
+    <color name="grey_spinner_bg">#ECEAEA</color>
+
+</resources>

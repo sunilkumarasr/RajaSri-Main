@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.BillingFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFF"
+            tools:context=".ui.activities.transaction_history.TransactionsHistoryActivity">
+
+            <include
+                android:id="@+id/includedHeaderLL"
+                layout="@layout/general_tool_bar"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:headerTitleText="@{@string/transaction_history}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/tabLayoutLL"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_35sdp"
+                app:strokeWidth="0dp"
+                app:layout_constraintEnd_toEndOf="@id/includedHeaderLL"
+                app:layout_constraintStart_toStartOf="@id/includedHeaderLL"
+                app:layout_constraintTop_toBottomOf="@id/includedHeaderLL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/paidCV"
+                        app:cardCornerRadius="@dimen/_25sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        app:cardBackgroundColor="#FF0000"
+                        android:layout_weight="1"
+                        app:strokeWidth="0dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txtEMI"
+                            android:gravity="center"
+                            android:fontFamily="sans-serif_semibold"
+                            android:textSize="@dimen/_15sdp"
+                            android:textColor="@color/black"
+                            android:text="@string/emi_"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/unPaidCV"
+                        app:cardCornerRadius="@dimen/_25sdp"
+                        app:cardBackgroundColor="#D9D9D9"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        app:strokeWidth="0dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txtInvoice"
+                            android:gravity="center"
+                            android:fontFamily="sans-serif_semibold"
+                            android:textSize="@dimen/_15sdp"
+                            android:textColor="@color/black"
+                            android:text="@string/invoice"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@id/tabLayoutLL"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</layout>

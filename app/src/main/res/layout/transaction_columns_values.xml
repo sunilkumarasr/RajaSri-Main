@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/transacLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_1sdp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#DDD" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Greater Global"
+            android:textColor="#252B5C"
+            android:textSize="@dimen/_10ssp" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#DDD" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="₹2,020/-"
+            android:textColor="#252B5C"
+            android:textSize="@dimen/_10ssp" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#DDD" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="July"
+            android:textColor="#252B5C"
+            android:textSize="@dimen/_10ssp" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#DDD" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/paid"
+            android:textColor="#6C63FF"
+            android:textSize="@dimen/_10ssp" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#DDD" />
+
+    </LinearLayout>
+</layout>

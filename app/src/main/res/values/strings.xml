@@ -1,0 +1,218 @@
+<resources>
+    <string name="app_name">RajaSri</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit_profile">Update Profile</string>
+    <string name="notifications">Notifications</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_and_conditions">Terms And Conditions</string>
+    <string name="about_us">About Us</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="support">Support</string>
+    <string name="transaction_history">Transactions History</string>
+    <string name="transaction_details">Transactions Details</string>
+    <string name="view_details">View Details</string>
+    <string name="loan_details">Loan Details</string>
+    <string name="by_continuing_you_agree_to_our_terms_of_service_and_privacy_policy">By continuing you agree to our <font fgcolor='#53B175'>Terms of Service</font></string>
+    <string name="privacy_policy_sign">and <font fgcolor='#53B175'>Privacy Policy</font> </string>
+    <string name="dont_have_an_account_sign_in">Don\'t have an account? <font fgcolor='#53B175'>Sign  Up</font></string>
+    <string name="already_have_an_account_sign_in">Already have an account? <font fgcolor='#53B175'>Sign In</font></string>
+    <string name="contact_us_description">Need assistance? We\'ve got your back! Drop us a line to <font fgcolor='#046938'>info@rajatownship.com</font> if you encounter any issues in Rajasree townships</string>
+    <string name="about_us_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </string>
+    <string name="agreement">Agreement</string>
+    <string name="clear_pad">Clear</string>
+    <string name="save_signature">Save</string>
+    <string name="SignaturePending">Signature Pending</string>
+    <string name="add_your_signature">Add Your Signature</string>
+    <string name="success_payment_note">You will be redirected to the home page shortly or click here to return to home age</string>
+    <string name="availbel_plots">Available Plots</string>
+    <string name="booked_plots">Booked Plots</string>
+    <string name="availbelability">Availability</string>
+    <string name="booking_id">Booking ID</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="customer_mobile_num">Customer Mobile</string>
+    <string name="plot_no">Plot no</string>
+    <string name="plot_facing">Plot Facing</string>
+    <string name="plot_flat_uds">Plot/Flat UDS</string>
+    <string name="plot_flat_area">Plot/Flat Area</string>
+    <string name="plot_status">Plot status</string>
+    <string name="paid_amount">Paid Amount</string>
+    <string name="due_amount">Due Amount</string>
+    <string name="enquiery_now">Enquiry Now</string>
+    <string name="how_much_you_invest">How much you want to invest?</string>
+    <string name="send_enquiry">Send Enquiry</string>
+    <string name="no_plots_available">No Plots available</string>
+    <string name="email_id">Email ID</string>
+    <string name="property_details">Property Details</string>
+    <string name="brochure">Brochure</string>
+    <string name="features">Features</string>
+    <string name="aminities">Amenities</string>
+    <string name="gallery">Gallery</string>
+    <string name="video">Video</string>
+    <string name="no_videos_available">No Videos available</string>
+    <string name="location">Location</string>
+    <string name="incase_any_quries">In any case of query please feel free to contact us</string>
+    <string name="fullname">Full Name:</string>
+    <string name="full_name">full name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="address">Address</string>
+    <string name="update">Update</string>
+    <string name="home">Home</string>
+    <string name="my_properties">My Properties</string>
+    <string name="bilings">Billings</string>
+    <string name="account">Account</string>
+    <string name="plot_bakn_loan_details">Plot Bank Loan Details</string>
+    <string name="venture_name">Venture Name : </string>
+    <string name="price">Price : </string>
+    <string name="open_plot_size">Open Plot Size : </string>
+    <string name="emi">EMI : </string>
+    <string name="emi_date">EMI Date : </string>
+    <string name="emi_months">EMI Months : </string>
+    <string name="loan_number">Loan Number : </string>
+    <string name="description">Description</string>
+    <string name="emi_details">EMI Details</string>
+    <string name="s_no">S.No</string>
+    <string name="emi_amount">Emi Amount</string>
+    <string name="date">Date</string>
+    <string name="status">Status</string>
+    <string name="details">Details</string>
+    <string name="paid">Paid</string>
+    <string name="sign_in">Sign In</string>
+    <string name="welcom_back_signin">Welcome back! Let’s get started.</string>
+    <string name="login">Login</string>
+    <string name="enter_4_digit_code">Enter your 4-digit code</string>
+    <string name="please_enter_otp_sent_to">Please enter the OTP to verify your account</string>
+    <string name="resend">Resend Code</string>
+    <string name="pending_properties">Pending Properties</string>
+    <string name="plot_details">Plot Details</string>
+    <string name="total_amount">Total Amount : </string>
+    <string name="paid_amount_">Paid Amount : </string>
+    <string name="emi_amount_">EMI Amount : </string>
+    <string name="location_">Location : </string>
+    <string name="plot_registration_name">Plot Reg Name : </string>
+    <string name="facing_">Facing : </string>
+    <string name="create_your_account">Create Your Account</string>
+    <string name="your_key_finding">Your key to finding the perfect property awaits! Create an account to get started</string>
+    <string name="fathername">Father Name</string>
+    <string name="select_dob">Select Date of Birth</string>
+    <string name="age">Age</string>
+    <string name="aadhar">Aadhaar</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="pincode">PinCode</string>
+    <string name="passbook_no">PassBook Number</string>
+    <string name="groupname">Group Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="altername_mobile_no">Alternate Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="nominee_name">Nominee Name</string>
+    <string name="occupation">Occupation</string>
+    <string name="primary_address">Primary Address</string>
+    <string name="secondary_address">Secondary Address</string>
+    <string name="emp_id">Employee ID</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="register">Register</string>
+    <string name="fullname_">Full Name</string>
+    <string name="subject">Subject</string>
+    <string name="comment">Comment</string>
+    <string name="submit">Submit</string>
+    <string name="transaction_id">Transaction Id : </string>
+    <string name="unpaid">UnPaid</string>
+    <string name="logout">Logout</string>
+    <string name="emi_">EMI</string>
+    <string name="invoice">Invoice</string>
+    <string name="hey">Hey,</string>
+    <string name="welcome_to_rajasri">Welcome to RajaSree Townships</string>
+    <string name="search_venture_name">Search Venture name</string>
+    <string name="available_projects">Available Projects</string>
+    <string name="already_bought_projects">Already You Bought Projects</string>
+    <string name="no_data_found">No data found</string>
+    <string name="view_all">View All</string>
+    <string name="venture_name_">Venture Name</string>
+    <string name="loan_month">Loan Month</string>
+    <string name="no_paid_transactions_found">No Paid transactions found</string>
+    <string name="no_unpaid_transactions_found">No UnPaid transactions found</string>
+    <string name="search_results_not_found">Searched Result Not Found</string>
+    <string name="recipt">Receipt</string>
+    <string name="pay">Pay</string>
+    <string name="booked">Booked</string>
+    <string name="availbelable">Available</string>
+    <string name="download_agreement">Download Agreement</string>
+    <string name="download">Download</string>
+    <string name="choose_language">Choose Your Language</string>
+    <string name="english">English</string>
+    <string name="telugu">Telugu</string>
+    <string name="check_internet">Please check internet connection</string>
+    <string name="brocher_not_attached">Brochure not attached</string>
+    <string name="no_media_selected">No media selected</string>
+    <string name="agreement_not_attached">Agreement not attached</string>
+    <string name="please_sign_agreement">Please sign the agreement</string>
+    <string name="please_fill_all_details">Please fill all details</string>
+    <string name="receipt_not_attached">Receipt not attached</string>
+    <string name="enter_valid_number">Please, enter valid mobile number</string>
+    <string name="enter_valid_otp">Please, enter valid otp</string>
+    <string name="enter_father_name">Please, enter Father Name</string>
+    <string name="enter_age">Please, enter Age</string>
+    <string name="otp_verify_account">Please enter the OTP to verify your account</string>
+    <string name="view_agrement">View Agreement</string>
+    <string name="accept_terms_conditions">Please Accept Our Terms And Conditions</string>
+    <string name="pay_amount">Amount Details</string>
+    <string name="advance_amount">Advance Amount :</string>
+    <string name="application_amount">Application Amount :</string>
+    <string name="payment_failed">Payment Failed</string>
+    <string name="try_again">Try Again</string>
+    <string name="nominee_relation">Relationship</string>
+    <string name="enter_valid_name">Enter valid name</string>
+    <string name="enter_valid_fathername">Enter valid father name</string>
+    <string name="enter_dob">Enter Date Of Birth</string>
+    <string name="enter_valid_aadhar">Enter valid aadhar number</string>
+    <string name="enter_email">Enter valid email id</string>
+    <string name="enter_country_name">Please enter country name</string>
+    <string name="enter_city_name">Please enter city name</string>
+    <string name="enter_pincode">Please enter pincode</string>
+    <string name="enter_group_name">Please enter Group Name</string>
+    <string name="enter_location">Please enter location </string>
+    <string name="enter_password">Please enter password</string>
+    <string name="enter_nominee_name">Please enter Nominee name</string>
+    <string name="enter_relation">Please enter relationship</string>
+    <string name="enter_occupation">Please enter Occupation</string>
+    <string name="enter_primary_address">Please enter primary address</string>
+    <string name="enter_secondary_address">Please enter secondary address</string>
+    <string name="please_accecpt_terms">Please accept our terms and conditions</string>
+    <string name="are_you_sure_logout">Are you sure want to logout?</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+
+
+    <string-array name="RelationList">
+        <item>Mr.</item>
+        <item>Ms.</item>
+        <item>Mrs.</item>
+        <item>Dr.</item>
+        <item>Prof.</item>
+    </string-array>
+
+    <string-array name="array_plot_types">
+        <item>All</item>
+        <item>East</item>
+        <item>West</item>
+        <item>North</item>
+        <item>South</item>
+        <item>East Corner</item>
+        <item>West Corner</item>
+        <item>North Corner</item>
+        <item>South Corner</item>
+    </string-array>
+    <string-array name="array_plot_types_">
+        <item>All</item>
+        <item>East</item>
+        <item>West</item>
+        <item>North</item>
+        <item>South</item>
+        <item>EastC</item>
+        <item>WestC</item>
+        <item>NorthC</item>
+        <item>SouthC</item>
+    </string-array>
+
+</resources>

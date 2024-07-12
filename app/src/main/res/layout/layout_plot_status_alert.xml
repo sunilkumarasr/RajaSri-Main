@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/_5sdp"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_5sdp"
+    android:background="@drawable/rectangle_stroke"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_20sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_names_left"
+                android:text="@string/booking_id"
+                />
+            <TextView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:text=":"
+                android:gravity="center"
+
+                />
+
+            <TextView
+                android:id="@+id/txt_booking_id"
+                style="@style/text_names_values"
+                android:text="12312"
+                 />
+        </LinearLayout>
+
+       <!-- <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_names_left"
+                android:text="@string/customer_name" />
+            <TextView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:text=":"
+                android:gravity="center"
+
+                />
+            <TextView
+                android:id="@+id/txt_customer_name"
+                style="@style/text_names_values" android:text="Customer Name"
+                 />
+        </LinearLayout>
+
+        <!--<com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp" />-->
+
+        <LinearLayout
+            android:id="@+id/lnr_customer_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView style="@style/text_names_left"
+                android:text="@string/customer_mobile_num"
+                />
+            <TextView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:text=":"
+                android:gravity="center"
+
+                />
+            <TextView
+                android:id="@+id/txt_customer_mobile"
+                style="@style/text_names_values"/>
+        </LinearLayout>
+
+       <!-- <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp" />-->
+
+        <LinearLayout
+            android:id="@+id/lnr_plot_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <TextView style="@style/text_names_left"
+                android:text="@string/plot_no"
+                android:id="@+id/txt_p_no"
+                />
+            <TextView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:text=":"
+                android:gravity="center"
+
+                />
+            <TextView
+                android:id="@+id/txt_plot_no"
+                style="@style/text_names_values" android:text="102"
+                 />
+        </LinearLayout>
+
+        <!--<com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <TextView style="@style/text_names_left"
+                android:text="@string/plot_facing"
+                android:id="@+id/txt_p_facing"
+                />
+            <TextView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:text=":"
+                android:gravity="center"
+
+                />
+            <TextView
+                android:id="@+id/txt_plot_facing"
+                style="@style/text_names_values" android:text="East"
+                />
+        </LinearLayout>
+
+       <!-- <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp" />-->
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <TextView style="@style/text_names_left"
+                android:text="@string/plot_flat_uds"
+                android:id="@+id/txt_p_uds"
+                />
+            <TextView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:text=":"
+                android:gravity="center"
+
+                />
+            <TextView
+                android:id="@+id/txt_uds"
+                style="@style/text_names_values" android:text="123"
+                />
+        </LinearLayout>
+
+        <!--<com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp" />-->
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <TextView style="@style/text_names_left"
+                android:text="@string/plot_flat_area"
+                android:id="@+id/txt_p_area"
+                />
+            <TextView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:text=":"
+                android:gravity="center"
+
+                />
+            <TextView
+                android:id="@+id/txt_plot_flat_area"
+                style="@style/text_names_values" android:text="1234"
+                />
+        </LinearLayout>
+
+      <!--  <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <TextView style="@style/text_names_left"
+                android:text="@string/plot_status"
+                android:id="@+id/txt_p_status"
+                />
+            <TextView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:text=":"
+                android:gravity="center"
+
+                />
+            <TextView
+                android:id="@+id/txt_plot_status"
+                style="@style/text_names_values" android:text="@string/booked"
+                android:textColor="#FF9800"
+                 />
+        </LinearLayout>
+
+        <!--<com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_names_left"
+                android:text="@string/paid_amount"
+                />
+            <TextView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:text=":"
+                android:gravity="center"
+
+                />
+            <TextView
+                android:id="@+id/txt_paid_amount"
+                style="@style/text_names_values" android:text="120"
+                />
+        </LinearLayout>
+
+        <!--<com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView style="@style/text_names_left"
+                android:text="@string/due_amount"
+                />
+            <TextView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:text=":"
+                android:gravity="center"
+
+                />
+            <TextView
+                android:id="@+id/txt_due_amount" style="@style/text_names_values"
+                android:text="120"
+                />
+        </LinearLayout>
+
+       <!-- <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp" />-->
+    </LinearLayout>
+
+</LinearLayout>

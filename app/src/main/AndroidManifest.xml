@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID"
+        tools:node="remove" />
+
+    <application
+        android:name=".application.RajaSriApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RajaSri"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.LanguageSelectionScreen"
+
+            android:exported="false" />
+        <activity
+            android:name=".ui.plots.EnquiryFromScreen"
+            android:exported="false" />
+        <activity
+            android:name=".ui.plots.AvailablePlotListScreen"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Razorpay.RazorpayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.authentication.SignUpNewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.AvailablePropertyDetails"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.PendingPropertiesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.TermsAndConditionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.PrivacyPolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.SupportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.ContactUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.LoanDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.PlotDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.TransactionDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.transaction_history.TransactionsHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dashboard.HomeActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.authentication.SignUpScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.authentication.OTPScreenActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.authentication.LoginScreen"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAppPrimary" />
+        <meta-data
+            android:name="com.onesignal.NotificationAccentColor.DEFAULT"
+            android:value="@color/colorAppPrimary" />
+
+        <activity
+            android:name=".ui.RajaSriEntryActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

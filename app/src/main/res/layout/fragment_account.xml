@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.wandroid.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF"
+        tools:context=".ui.fragments.AccountFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFF">
+
+                <FrameLayout
+                    android:id="@+id/frameLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_gravity="top"
+                        android:background="#FB4E45" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_gravity="bottom"
+                        android:background="#FFF" />
+
+                    <ImageView
+                        android:id="@+id/profileIV"
+                        android:visibility="visible"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/baseline_image_24" />
+
+                    <ImageView
+                        android:id="@+id/editIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:src="@drawable/ic_profile_edit_png" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/userDetailsLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/frameLL">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/userNameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        tools:text="Mitta Raju"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/userMailTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="rajesh@royalitpark.com"
+                        android:textColor="#626262"
+                        android:textSize="@dimen/_12ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/optionsLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/userDetailsLL">
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/plotsLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_profile_plot_png" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_10sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:fontFamily="sans-serif"
+                                android:text="My Properties"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Lorem Ipsum has been the industry's standard"
+                                android:textColor="#626262"
+                                android:textSize="@dimen/_12ssp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_8sdp" />
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/transactionsLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_profile_transaction_png" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_10sdp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:fontFamily="sans-serif"
+                                android:text="Transactions"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:fontFamily="sans-serif"
+                                android:text="Lorem Ipsum has been the industry's standard"
+                                android:textColor="#626262"
+                                android:textSize="@dimen/_12ssp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_8sdp" />
+
+
+                    <LinearLayout
+                        android:id="@+id/privacyPolicyLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:visibility="visible"
+                            android:layout_width="@dimen/_26sdp"
+                            android:layout_height="@dimen/_26sdp"
+                            android:src="@drawable/privacy_policy" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_10sdp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:fontFamily="sans-serif"
+                                android:text="@string/privacy_policy"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:fontFamily="sans-serif"
+                                android:text="Lorem Ipsum has been the industry's standard"
+                                android:textColor="#626262"
+                                android:textSize="@dimen/_12ssp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_8sdp" />
+
+                    <LinearLayout
+                        android:id="@+id/termsConditionsLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:visibility="visible"
+                            android:layout_width="@dimen/_26sdp"
+                            android:layout_height="@dimen/_26sdp"
+                            android:src="@drawable/terms_and_conditions" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_10sdp">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:fontFamily="sans-serif"
+                                android:text="@string/terms_and_conditions"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:fontFamily="sans-serif"
+                                android:text="Lorem Ipsum has been the industry's standard"
+                                android:textColor="#626262"
+                                android:textSize="@dimen/_12ssp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_8sdp" />
+
+                    <LinearLayout
+                        android:id="@+id/aboutLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_26sdp"
+                            android:layout_height="@dimen/_26sdp"
+                            android:src="@drawable/ic_profile_info_png" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_10sdp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:fontFamily="sans-serif"
+                                android:text="@string/about_us"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <TextView
+                                android:visibility="gone"
+                                android:fontFamily="sans-serif"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Lorem Ipsum has been the industry's standard"
+                                android:textColor="#626262"
+                                android:textSize="@dimen/_12ssp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_8sdp" />
+
+                    <LinearLayout
+                        android:id="@+id/contactLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_26sdp"
+                            android:layout_height="@dimen/_26sdp"
+                            android:src="@drawable/ic_profile_phone_call_png" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_10sdp">
+
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="sans-serif"
+                                android:text="@string/contact_us"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <TextView
+                                android:visibility="gone"
+                                android:fontFamily="sans-serif"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Lorem Ipsum has been the industry's standard"
+                                android:textColor="#626262"
+                                android:textSize="@dimen/_12ssp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_8sdp" />
+                    <LinearLayout
+                        android:id="@+id/supportLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_26sdp"
+                            android:layout_height="@dimen/_26sdp"
+                            android:src="@drawable/support_24" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_10sdp">
+
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="sans-serif"
+                                android:text="@string/support"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <TextView
+                                android:visibility="gone"
+                                android:fontFamily="sans-serif"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Lorem Ipsum has been the industry's standard"
+                                android:textColor="#626262"
+                                android:textSize="@dimen/_12ssp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_8sdp" />
+                    <LinearLayout
+                        android:id="@+id/lnr_language"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_26sdp"
+                            android:layout_height="@dimen/_26sdp"
+                            android:src="@drawable/baseline_alternate_email_24" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_10sdp">
+
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="sans-serif"
+                                android:text="@string/choose_language"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <TextView
+                                android:visibility="gone"
+                                android:fontFamily="sans-serif"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Lorem Ipsum has been the industry's standard"
+                                android:textColor="#626262"
+                                android:textSize="@dimen/_12ssp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_8sdp" />
+
+                    <LinearLayout
+                        android:id="@+id/logoutLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_26sdp"
+                            android:layout_height="@dimen/_26sdp"
+                            android:src="@drawable/ic_profile_logout_png" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_10sdp">
+
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="sans-serif"
+                                android:text="@string/logout"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <TextView
+                                android:visibility="gone"
+                                android:fontFamily="sans-serif"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Lorem Ipsum has been the industry's standard"
+                                android:textColor="#626262"
+                                android:textSize="@dimen/_12ssp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_8sdp" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </FrameLayout>
+</layout>

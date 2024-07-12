@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="@dimen/_25sdp"
+    tools:context=".ui.LanguageSelectionScreen">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:visibility="gone"
+        android:src="@drawable/app_logo_ic"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_language"
+        android:gravity="center"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/_22sdp"
+        />
+    <RadioGroup
+        android:id="@+id/radio_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="@dimen/_20sdp"
+        >
+        <RadioButton
+            android:id="@+id/radio_eng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="@string/english"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:checked="true"
+            android:textColor="@drawable/radio_color_selector"
+            android:background="@drawable/radio_selector"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:layout_margin="@dimen/_8sdp"
+            />
+        <RadioButton
+            android:id="@+id/radio_telugu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="@string/telugu"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:textColor="@drawable/radio_color_selector"
+            android:background="@drawable/radio_selector"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:layout_margin="@dimen/_8sdp"
+            />
+
+    </RadioGroup>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/submitSupport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:cardBackgroundColor="#F80C00"
+        app:strokeColor="#F80C00">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/update"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

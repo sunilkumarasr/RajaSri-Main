@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activities.LoanDetailsActivity">
+
+        <include
+            android:id="@+id/includedHeaderLL"
+            layout="@layout/general_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:headerTitleText="@{@string/loan_details}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/includedHeaderLL"
+            app:layout_constraintStart_toStartOf="@id/includedHeaderLL"
+            app:layout_constraintTop_toBottomOf="@id/includedHeaderLL">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#F7EAD2">
+
+                <LinearLayout
+                    android:id="@+id/bannerLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/bannerIV"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:foreground="@drawable/details_page_back_corners"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/venture_image_png" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/titleTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_18ssp"
+                                tools:text="Aliens Hub" />
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="#FFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bannerLL"
+                    app:strokeColor="#FFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#D9D9D9"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="@string/plot_bakn_loan_details"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:gravity="end"
+                                android:text="@string/venture_name"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <TextView
+                                android:id="@+id/ventureNameTV"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:gravity="start"
+                                android:textColor="#252B5C"
+                                android:textSize="@dimen/_12ssp"
+                                tools:text="Aliens Hub" />
+                        </LinearLayout>
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:gravity="end"
+                                android:text="@string/price"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <TextView
+                                android:id="@+id/priceTV"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:gravity="start"
+                                android:textColor="#252B5C"
+                                android:textSize="@dimen/_12ssp"
+                                tools:text="₹ 40 Lac " />
+                        </LinearLayout>
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:gravity="end"
+                                android:text="@string/open_plot_size"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <TextView
+                                android:id="@+id/areaTV"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:gravity="start"
+                                android:textColor="#252B5C"
+                                android:textSize="@dimen/_12ssp"
+                                tools:text="147" />
+                        </LinearLayout>
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:gravity="end"
+                                android:text="@string/emi"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <TextView
+                                android:id="@+id/emiPriceTV"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:gravity="start"
+                                android:textColor="#252B5C"
+                                android:textSize="@dimen/_12ssp"
+                                tools:text="14,102/-" />
+                        </LinearLayout>
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:gravity="end"
+                                android:text="@string/emi_date"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <TextView
+                                android:id="@+id/emiDateTV"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:gravity="start"
+                                android:textColor="#252B5C"
+                                android:textSize="@dimen/_12ssp"
+                                tools:text="01-08-2023" />
+                        </LinearLayout>
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:gravity="end"
+                                android:text="@string/emi_months"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <TextView
+                                android:id="@+id/emiMonthsTV"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:gravity="start"
+                                android:textColor="#252B5C"
+                                android:textSize="@dimen/_12ssp"
+                                tools:text="40M/19M" />
+                        </LinearLayout>
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:gravity="end"
+                                android:text="@string/loan_number"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <TextView
+                                android:id="@+id/loanNumberTV"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif"
+                                android:gravity="start"
+                                android:textColor="#252B5C"
+                                android:textSize="@dimen/_12ssp"
+                                tools:text="1020MN2513" />
+                        </LinearLayout>
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp" />
+
+
+                    </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:padding="@dimen/_12sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif"
+                            android:gravity="end"
+                            android:text="@string/description"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/descriptionTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif"
+                            android:gravity="start"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp"
+                            tools:text="" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:id="@+id/emiDetailsTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="#F5F5F5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/emi_details"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardDetails" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/emiDetailsTV"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#53B175"
+                            android:orientation="horizontal"
+                            android:paddingVertical="@dimen/_3sdp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:paddingHorizontal="@dimen/_5sdp"
+                                android:text="@string/s_no"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                app:dividerColor="#DDD" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:paddingHorizontal="@dimen/_5sdp"
+                                android:text="@string/emi_amount"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                app:dividerColor="#DDD" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.6"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:paddingHorizontal="@dimen/_5sdp"
+                                android:text="@string/date"
+                                android:singleLine="true"
+                                android:ellipsize="middle"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                app:dividerColor="#DDD" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:paddingHorizontal="@dimen/_5sdp"
+                                android:text="@string/status"
+                                android:singleLine="true"
+                                android:ellipsize="middle"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                app:dividerColor="#DDD" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.6"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:paddingHorizontal="@dimen/_5sdp"
+                                android:text="@string/details"
+                                android:singleLine="true"
+                                android:ellipsize="middle"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10ssp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingVertical="@dimen/_2sdp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="01"
+                                    android:textColor="#818181"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="2,500/-"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.6"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="19/08/23"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="@dimen/_5sdp"
+                                    android:text="@string/paid"
+                                    android:textColor="#6C63FF"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.6"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingHorizontal="@dimen/_2sdp">
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:id="@+id/viewDetailsCV1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:cardBackgroundColor="#FB4E45"
+                                        app:strokeWidth="0dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="sans-serif"
+                                            android:gravity="center"
+                                            android:paddingHorizontal="@dimen/_2sdp"
+                                            android:text="@string/view_details"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_7ssp" />
+                                    </com.google.android.material.card.MaterialCardView>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                app:dividerColor="#DDD" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingVertical="@dimen/_2sdp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="01"
+                                    android:textColor="#818181"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="2,500/-"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="19/08/23"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="@dimen/_5sdp"
+                                    android:text="Paid"
+                                    android:textColor="#6C63FF"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingHorizontal="@dimen/_2sdp">
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:id="@+id/viewDetailsCV2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:cardBackgroundColor="#FB4E45"
+                                        app:strokeWidth="0dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="sans-serif"
+                                            android:gravity="center"
+                                            android:paddingHorizontal="@dimen/_2sdp"
+                                            android:text="View Details"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_7ssp" />
+                                    </com.google.android.material.card.MaterialCardView>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                app:dividerColor="#DDD" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingVertical="@dimen/_2sdp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="01"
+                                    android:textColor="#818181"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="2,500/-"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="19/08/23"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="@dimen/_5sdp"
+                                    android:text="Paid"
+                                    android:textColor="#6C63FF"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingHorizontal="@dimen/_2sdp">
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:id="@+id/viewDetailsCV3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:cardBackgroundColor="#FB4E45"
+                                        app:strokeWidth="0dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="sans-serif"
+                                            android:gravity="center"
+                                            android:paddingHorizontal="@dimen/_2sdp"
+                                            android:text="View Details"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_7ssp" />
+                                    </com.google.android.material.card.MaterialCardView>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                app:dividerColor="#DDD" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingVertical="@dimen/_2sdp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="01"
+                                    android:textColor="#818181"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="2,500/-"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="19/08/23"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="@dimen/_5sdp"
+                                    android:text="Paid"
+                                    android:textColor="#6C63FF"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingHorizontal="@dimen/_2sdp">
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:id="@+id/viewDetailsCV4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:cardBackgroundColor="#FB4E45"
+                                        app:strokeWidth="0dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="sans-serif"
+                                            android:gravity="center"
+                                            android:paddingHorizontal="@dimen/_2sdp"
+                                            android:text="View Details"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_7ssp" />
+                                    </com.google.android.material.card.MaterialCardView>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                app:dividerColor="#DDD" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingVertical="@dimen/_2sdp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="01"
+                                    android:textColor="#818181"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="2,500/-"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="19/08/23"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="@dimen/_5sdp"
+                                    android:text="Paid"
+                                    android:textColor="#6C63FF"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    app:dividerColor="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingHorizontal="@dimen/_2sdp">
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:id="@+id/viewDetailsCV5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:cardBackgroundColor="#FB4E45"
+                                        app:strokeWidth="0dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="sans-serif"
+                                            android:gravity="center"
+                                            android:paddingHorizontal="@dimen/_2sdp"
+                                            android:text="View Details"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_7ssp" />
+                                    </com.google.android.material.card.MaterialCardView>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/emiRV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:itemCount="5"
+                            tools:listitem="@layout/emi_item_layout" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.BillingFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFF"
+            tools:context=".ui.activities.transaction_history.TransactionsHistoryActivity">
+
+            <include
+                android:id="@+id/includedHeaderLL"
+                layout="@layout/general_tool_bar"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:headerTitleText="@{@string/transaction_history}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/tabLayoutLL"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                app:strokeWidth="0dp"
+                app:cardBackgroundColor="#FB4E45"
+                app:layout_constraintEnd_toEndOf="@id/includedHeaderLL"
+                app:layout_constraintStart_toStartOf="@id/includedHeaderLL"
+                app:layout_constraintTop_toBottomOf="@id/includedHeaderLL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/paidCV"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardBackgroundColor="#7192B0"
+                        android:layout_weight="1"
+                        app:strokeWidth="0dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:gravity="center"
+                            android:fontFamily="sans-serif"
+                            android:textSize="@dimen/_14ssp"
+                            android:textColor="@color/white"
+                            android:text="@string/paid"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/unPaidCV"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardBackgroundColor="#FB4E45"
+                        android:layout_weight="1"
+                        app:strokeWidth="0dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:gravity="center"
+                            android:fontFamily="sans-serif"
+                            android:textSize="@dimen/_14ssp"
+                            android:textColor="@color/white"
+                            android:text="@string/unpaid"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@id/tabLayoutLL"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</layout>

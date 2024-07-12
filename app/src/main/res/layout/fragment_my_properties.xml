@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/searchCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:cardBackgroundColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/welcomeTextLL"
+            app:strokeColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_search_home_png" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/searchET"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ems="35"
+                    android:hint="@string/search_venture_name"
+                    android:inputType="text"
+                    android:maxLength="35" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_filter_home_png" />
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/mm_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#F5F4F8"
+                app:cardCornerRadius="@dimen/_20sdp"
+                app:strokeColor="#F5F4F8">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        app:strokeWidth="0dp"
+                        app:cardCornerRadius="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageIV"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_100sdp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/venture_image_png" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_4sdp"
+                        android:layout_marginVertical="@dimen/_4sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="sans-serif"
+                            android:maxLines="1"
+                            android:text="Aliens Hub "
+                            android:textColor="#234F68"
+                            android:textSize="@dimen/_14ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_10sdp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_location_png" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="sans-serif"
+                                android:maxLines="1"
+                                android:text="Kadthal, Hyderabad "
+                                android:textColor="#234F68"
+                                android:textSize="@dimen/_10ssp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="147"
+                            android:textColor="#234F68" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/viewdetails_Bt"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_23sdp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/rounded_green_corners"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:padding="@dimen/_2sdp"
+                                android:text="View Details"
+
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/loandetails_bt"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_23sdp"
+                                android:layout_marginLeft="@dimen/_4sdp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/button_bg_red_color_corners"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:text="Loan Details"
+                                android:textAllCaps="false"
+
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </LinearLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#F5F4F8"
+                app:cardCornerRadius="@dimen/_20sdp"
+                app:strokeColor="#F5F4F8">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_100sdp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/venture_image_png" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_4sdp"
+                        android:layout_marginVertical="@dimen/_4sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="sans-serif"
+                            android:maxLines="1"
+                            android:text="Greater Global "
+                            android:textColor="#234F68"
+                            android:textSize="@dimen/_14ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_10sdp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_location_png" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="sans-serif"
+                                android:maxLines="1"
+                                android:text="Kadthal, Hyderabad "
+                                android:textColor="#234F68"
+                                android:textSize="@dimen/_10ssp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="147"
+                            android:textColor="#234F68" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_23sdp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/rounded_green_corners"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:padding="@dimen/_2sdp"
+                                android:text="View Details"
+
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_23sdp"
+                                android:layout_marginLeft="@dimen/_4sdp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/button_bg_red_color_corners"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:padding="@dimen/_2sdp"
+                                android:text="Loan Details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </LinearLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/searchedRV"
+            android:visibility="gone"
+            android:layout_margin="@dimen/_5sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+        <TextView
+            android:gravity="center"
+            android:textSize="@dimen/_16ssp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:id="@+id/noDataFoundTV"
+            android:text="@string/search_results_not_found"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+
+    </LinearLayout>
+</layout>

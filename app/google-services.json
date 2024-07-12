@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "619683355795",
+    "project_id": "raja-sree",
+    "storage_bucket": "raja-sree.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619683355795:android:3af67300ba6e1357c6c166",
+        "android_client_info": {
+          "package_name": "com.rss.rajasri"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVc18E-q4LCjyBDHTyabgu2Abhr9wXmjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

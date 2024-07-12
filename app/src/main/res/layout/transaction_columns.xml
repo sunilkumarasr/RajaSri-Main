@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#53B175"
+
+        android:orientation="horizontal"
+        android:padding="@dimen/_1sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="@string/venture_name_"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#DDD" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="@string/emi_amount"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#DDD" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="@string/loan_month"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#DDD" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="@string/status"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp" />
+
+
+    </LinearLayout>
+</layout>

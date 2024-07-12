@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activities.SupportActivity">
+
+        <include
+            android:id="@+id/includedHeaderLL"
+            layout="@layout/general_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:headerTitleText="@{@string/support}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/includedHeaderLL"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:src="@drawable/support_banner_png"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </FrameLayout>
+                    <LinearLayout
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            app:cardBackgroundColor="#F5F5F5"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:strokeColor="#F5F5F5">
+
+                            <EditText
+                                android:id="@+id/fullNameET"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="@string/fullname_"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:padding="@dimen/_10sdp"
+                                android:textColor="@color/black" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            app:cardBackgroundColor="#F5F5F5"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:strokeColor="#F5F5F5">
+
+                            <EditText
+                                android:id="@+id/edEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="@string/email_id"
+                                android:inputType="textEmailAddress"
+                                android:maxLines="1"
+                                android:padding="@dimen/_10sdp"
+                                android:textColor="@color/black" />
+                        </com.google.android.material.card.MaterialCardView>
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            app:cardBackgroundColor="#F5F5F5"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:strokeColor="#F5F5F5">
+
+                            <EditText
+                                android:id="@+id/edPhonenumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="@string/phone_number"
+                                android:inputType="phone"
+                                android:maxLines="1"
+                                android:maxLength="10"
+                                android:padding="@dimen/_10sdp"
+                                android:textColor="@color/black" />
+                        </com.google.android.material.card.MaterialCardView>
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            app:cardBackgroundColor="#F5F5F5"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:strokeColor="#F5F5F5">
+
+                            <EditText
+                                android:id="@+id/edSubject"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="@string/subject"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:padding="@dimen/_10sdp"
+                                android:textColor="@color/black" />
+                        </com.google.android.material.card.MaterialCardView>
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            app:cardBackgroundColor="#F5F5F5"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:strokeColor="#F5F5F5">
+
+                            <EditText
+                                android:id="@+id/edComment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="@string/comment"
+                                android:lines="3"
+                                android:gravity="start"
+                                android:inputType="textMultiLine"
+                                android:maxLines="1"
+                                android:padding="@dimen/_10sdp"
+                                android:textColor="@color/black" />
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/submitSupport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        app:cardBackgroundColor="#F80C00"
+                        app:strokeColor="#F80C00">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_10sdp"
+                                android:text="@string/submit"
+                                android:fontFamily="sans-serif"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_16ssp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

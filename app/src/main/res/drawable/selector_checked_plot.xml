@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:state_checked="true" android:drawable="@drawable/rectangle_booked_plots"/>
+<item android:state_checked="false" android:drawable="@drawable/rectangle_available_plots"/>
+<item  android:drawable="@drawable/rectangle_available_plots"/>
+</selector>

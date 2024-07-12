@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.plots.AvailablePlotListScreen">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:elevation="@dimen/_5sdp"
+        >
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:visibility="visible"
+                android:id="@+id/backButtonIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/arrow_back_ios_24" />
+
+            <TextView
+                android:id="@+id/headerTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:text="@string/property_details"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textSize="@dimen/_18ssp" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginVertical="@dimen/_16sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            >
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_32sdp"
+                android:background="@drawable/rectangle_stroke"
+                android:fontFamily="sans-serif"
+                android:hint="@string/customer_name"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:paddingVertical="@dimen/_2sdp" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_32sdp"
+                android:background="@drawable/rectangle_stroke"
+                android:fontFamily="sans-serif"
+                android:hint="@string/customer_mobile_num"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:imeOptions="actionNext"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:paddingVertical="@dimen/_2sdp" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_32sdp"
+                android:background="@drawable/rectangle_stroke"
+                android:fontFamily="sans-serif"
+                android:hint="@string/email_id"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:paddingVertical="@dimen/_2sdp" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_investment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_32sdp"
+                android:background="@drawable/rectangle_stroke"
+                android:fontFamily="sans-serif"
+                android:hint="@string/how_much_you_invest"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:paddingVertical="@dimen/_2sdp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_comments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_80sdp"
+                android:background="@drawable/rectangle_stroke"
+                android:fontFamily="sans-serif"
+                android:hint="@string/how_much_you_invest"
+                android:inputType="text"
+                android:minLines="3"
+                android:gravity="start"
+                android:imeOptions="actionDone"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:paddingVertical="@dimen/_2sdp" />
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btn_send"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/green"
+                app:cardCornerRadius="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                app:strokeColor="#8BC34A">
+                <LinearLayout
+                    android:id="@+id/lnr_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_4sdp"
+                        android:minWidth="@dimen/_100sdp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/send_enquiry"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:gravity="center"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

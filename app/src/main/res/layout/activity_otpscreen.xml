@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.authentication.OTPScreenActivity">
+
+        <FrameLayout
+            android:id="@+id/bannerFL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp"
+                android:background="@drawable/otp_back" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bannerFL">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:text="@string/enter_4_digit_code"
+                    android:textColor="#181725"
+                    android:fontFamily="sans-serif"
+                    android:textSize="@dimen/_18ssp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/mobileNumberTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/please_enter_otp_sent_to"
+                android:textColor="#686868"
+                android:textSize="@dimen/_14ssp" />
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/txtOTP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:cardBackgroundColor="#F5F4F8"
+                    app:strokeColor="#F5F4F8">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:background="@null"
+                            android:id="@+id/pinEdit1"
+                            android:fontFamily="sans-serif"
+                            android:ems="1"
+                            android:gravity="center"
+                            android:inputType="phone"
+                            android:maxLength="1"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:paddingVertical="@dimen/_2sdp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    app:cardBackgroundColor="#F5F4F8"
+                    app:strokeColor="#F5F4F8">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:background="@null"
+                            android:id="@+id/pinEdit2"
+                            android:ems="1"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:inputType="phone"
+                            android:maxLength="1"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:paddingVertical="@dimen/_2sdp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    app:cardBackgroundColor="#F5F4F8"
+                    app:strokeColor="#F5F4F8">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:background="@null"
+                            android:ems="1"
+                            android:fontFamily="sans-serif"
+                            android:id="@+id/pinEdit3"
+                            android:gravity="center"
+                            android:inputType="phone"
+                            android:maxLength="1"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:paddingVertical="@dimen/_2sdp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    app:cardBackgroundColor="#F5F4F8"
+                    app:strokeColor="#F5F4F8">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:background="@null"
+                            android:ems="1"
+                            android:fontFamily="sans-serif"
+                            android:id="@+id/pinEdit4"
+                            android:gravity="center"
+                            android:inputType="phone"
+                            android:maxLength="1"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:paddingVertical="@dimen/_2sdp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/floatingBT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:src="@drawable/floating_next_png"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/resendCodeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="@string/resend"
+            android:textColor="#53B175"
+            android:fontFamily="sans-serif"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/floatingBT"
+            app:layout_constraintEnd_toStartOf="@id/floatingBT"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/floatingBT" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
