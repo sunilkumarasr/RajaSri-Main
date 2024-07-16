@@ -30,19 +30,22 @@ class RajaSriEntryActivity : AppCompatActivity() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             window.insetsController?.setSystemBarsAppearance(0, WindowInsets.Type.statusBars())
-            window.insetsController?.setSystemBarsAppearance(WindowInsets.Type.statusBars(), WindowInsets.Type.statusBars())
+            window.insetsController?.setSystemBarsAppearance(
+                WindowInsets.Type.statusBars(),
+                WindowInsets.Type.statusBars()
+            )
             window.statusBarColor = getColor(R.color.splash_color)
         } else {
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
             window.statusBarColor = getColor(R.color.splash_color)
         }
-      val  language=RajaSriApp.appPreference.getLanguage()
+        val language = RajaSriApp.appPreference.getLanguage()
 
         val locale = Locale(language)
         Locale.setDefault(locale)
-        var config= Configuration()
-        config.locale=locale
-        baseContext.resources.updateConfiguration(config,baseContext.resources.displayMetrics)
+        var config = Configuration()
+        config.locale = locale
+        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
 
         /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             RajaSriApp.updateResources(applicationContext, language);
@@ -60,13 +63,11 @@ class RajaSriEntryActivity : AppCompatActivity() {
                 applicationContext,
                 Manifest.permission.POST_NOTIFICATIONS
             ) == PackageManager.PERMISSION_GRANTED
-        )
-        {
+        ) {
             Handler(Looper.getMainLooper()).postDelayed({
                 navigateToValidScreens()
             }, 1500)
-        }else
-        {
+        } else {
             requestPermissionLauncher.launch(
                 arrayOf(
                     Manifest.permission.POST_NOTIFICATIONS
@@ -78,13 +79,13 @@ class RajaSriEntryActivity : AppCompatActivity() {
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
-        val  language=RajaSriApp.appPreference.getLanguage()
+        val language = RajaSriApp.appPreference.getLanguage()
 
         val locale = Locale(language)
         Locale.setDefault(locale)
-        var config= Configuration()
-        config.locale=locale
-        baseContext.resources.updateConfiguration(config,baseContext.resources.displayMetrics)
+        var config = Configuration()
+        config.locale = locale
+        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
 
     }
 
@@ -98,10 +99,14 @@ class RajaSriEntryActivity : AppCompatActivity() {
                 }, 1500)
             }
         }
+
     private fun askNotificationPermission() {
         // This is only necessary for API level >= 33 (TIRAMISU)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS) ==
+            if (ContextCompat.checkSelfPermission(
+                    this,
+                    android.Manifest.permission.POST_NOTIFICATIONS
+                ) ==
                 PackageManager.PERMISSION_GRANTED
             ) {
                 Handler(Looper.getMainLooper()).postDelayed({
@@ -112,11 +117,18 @@ class RajaSriEntryActivity : AppCompatActivity() {
                 //       by them granting the POST_NOTIFICATION permission. This UI should provide the user
                 //       "OK" and "No thanks" buttons. If the user selects "OK," directly request the permission.
                 //       If the user selects "No thanks," allow the user to continue without notifications.
-                ActivityCompat.requestPermissions(this@RajaSriEntryActivity,  arrayOf(android.Manifest.permission.POST_NOTIFICATIONS), 200);
+                ActivityCompat.requestPermissions(
+                    this@RajaSriEntryActivity,
+                    arrayOf(android.Manifest.permission.POST_NOTIFICATIONS),
+                    200
+                );
             } else {
                 // Directly ask for the permission
-                ActivityCompat.requestPermissions(this@RajaSriEntryActivity,  arrayOf(android.Manifest.permission.POST_NOTIFICATIONS), 200);
-
+                ActivityCompat.requestPermissions(
+                    this@RajaSriEntryActivity,
+                    arrayOf(android.Manifest.permission.POST_NOTIFICATIONS),
+                    200
+                );
                 //requestPermissionLauncher.launch(android.Manifest.permission.POST_NOTIFICATIONS)
             }
         }
@@ -134,11 +146,13 @@ class RajaSriEntryActivity : AppCompatActivity() {
     }
 
     private fun navigateToValidScreens() {
-        if(RajaSriApp.appPreference.isLoggedIn()){
+        if (RajaSriApp.appPreference.isLoggedIn()) {
             startActivity(Intent(this@RajaSriEntryActivity, PendingPropertiesActivity::class.java))
-        }else{
+        } else {
             startActivity(Intent(this@RajaSriEntryActivity, LanguageSelectionScreen::class.java))
         }
         finishAffinity()
     }
+
+
 }

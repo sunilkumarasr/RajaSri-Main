@@ -1,20 +1,14 @@
 package com.rss.rajasri.ui.fragments.Bullings.Childs
 
-import android.app.Activity
 import android.content.BroadcastReceiver
-import android.content.Context
 import android.content.Intent
-import android.content.IntentFilter
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.gson.Gson
-import com.razorpay.Checkout
-import com.razorpay.PaymentResultListener
 import com.rss.rajasri.R
 import com.rss.rajasri.application.RajaSriApp
 import com.rss.rajasri.databinding.FragmentUnpaidBinding
@@ -22,17 +16,14 @@ import com.rss.rajasri.datamodels.response.EmiDetailsDM
 import com.rss.rajasri.retrofit.RetrofitClient
 import com.rss.rajasri.ui.Razorpay.RazorpayActivity
 import com.rss.rajasri.ui.activities.transaction_history.TransactionUnpaidAdapter
-import com.rss.rajasri.ui.authentication.OTPScreenActivity
 import com.rss.rajasri.ui.dashboard.HomeActivity
 import com.rss.rajasri.utils.CommonMethods
 import com.rss.rajasri.utils.CommonMethods.isInternetAvailable
 import com.rss.rajasri.utils.hide
 import com.rss.rajasri.utils.show
 import com.rss.rajasri.utils.showToastMsg
-import com.weipl.checkout.WLCheckoutActivity
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
-import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 import retrofit2.Call
@@ -47,13 +38,15 @@ class EMIUnpaidFragment : Fragment() {
 
     var property_id: String = "";
     var emi_id: String = "";
-    var emi_amount: String = "";
+    var emi_amount="";
+
 
     private lateinit var autoReadOtpHelper: BroadcastReceiver
 
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?,): View {
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?,
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentUnpaidBinding.inflate(inflater, container, false)
 
@@ -136,9 +129,12 @@ class EMIUnpaidFragment : Fragment() {
                     property_id = Gson().toJson(it.customerPropertyLoanId)
                     emi_id = Gson().toJson(it.id)
                     emi_amount = Gson().toJson(it.emi_amount)
+
+                    val extractedAmount = extractAndConvertJsonToInt(emi_amount)
+
                     //paynimoApiRun()
                     startActivityForResult(Intent(activity, RazorpayActivity()::class.java).apply {
-                        putExtra("Amount",emi_amount)
+                        putExtra("Amount",extractedAmount.toString())
                         putExtra("paymentType","EMI")
                         putExtra("PayId",property_id)
                         putExtra("Id",emi_id)
@@ -156,6 +152,12 @@ class EMIUnpaidFragment : Fragment() {
             binding.noDataFoundTV.visibility = View.VISIBLE
             context?.showToastMsg(body?.message)
         }
+    }
+
+    fun extractAndConvertJsonToInt(jsonString: String): Int {
+        // Parse the JSON string to get the actual value
+        val amountString = Gson().fromJson(jsonString, String::class.java)
+        return amountString.toInt()
     }
 
     //old payment paynimo

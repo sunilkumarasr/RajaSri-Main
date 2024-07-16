@@ -107,10 +107,13 @@ class InvoiceUnpaidFragment : Fragment(), WLCheckoutActivity.PaymentResponseList
                     Adapter_Details -> {
                         invoiceId = Gson().toJson(it.id)
                         invoiceAmount = Gson().toJson(it.invoiceAmount)
+
+                        val extractedAmount = extractAndConvertJsonToInt(invoiceAmount)
+
 //                        paynimoApiRun()
                         //InvoicepaymentSuccess(invoiceId)
                         startActivityForResult(Intent(activity, RazorpayActivity()::class.java).apply {
-                            putExtra("Amount",invoiceAmount)
+                            putExtra("Amount",extractedAmount.toString())
                             putExtra("paymentType","Invoice")
                             putExtra("PayId",invoiceId)
                             putExtra("Id","")
@@ -118,6 +121,7 @@ class InvoiceUnpaidFragment : Fragment(), WLCheckoutActivity.PaymentResponseList
                     }
                 }
             }
+
             //body.data?.pending_invoices?.let { propertiesAdapter.setData(it) }
 
             val pendingInvoices: List<ListofInvoice>? = body?.data?.pending_invoices
@@ -143,6 +147,11 @@ class InvoiceUnpaidFragment : Fragment(), WLCheckoutActivity.PaymentResponseList
             }
         }
 
+    }
+
+    fun extractAndConvertJsonToInt(jsonString: String): Int {
+        val amountString = Gson().fromJson(jsonString, String::class.java)
+        return amountString.toInt()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

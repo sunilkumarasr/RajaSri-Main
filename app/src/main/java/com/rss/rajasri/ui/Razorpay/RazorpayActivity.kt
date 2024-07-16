@@ -76,7 +76,8 @@ class RazorpayActivity : AppCompatActivity(), PaymentResultListener {
         //rzp_live_KnBdoDUl13wajc
 
         val checkout = Checkout()
-        checkout.setKeyID("rzp_test_I5qDYUDVJ0CSnZ")
+        //checkout.setKeyID("rzp_test_I5qDYUDVJ0CSnZ")
+        checkout.setKeyID("rzp_live_KnBdoDUl13wajc")
 
         try {
             val options = JSONObject()
@@ -117,6 +118,7 @@ class RazorpayActivity : AppCompatActivity(), PaymentResultListener {
     }
 
     override fun onPaymentError(code: Int, response: String?) {
+        Log.e("error_",response.toString())
         //Toast.makeText(this, response.toString(), Toast.LENGTH_LONG).show()
         binding.cardViewPaymentFailed.visibility = View.VISIBLE
         binding.cardViewPaymentSuccess.visibility = View.GONE
@@ -216,13 +218,10 @@ class RazorpayActivity : AppCompatActivity(), PaymentResultListener {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        if(paymentType.equals("Signature"))
-        {
+        if(paymentType.equals("Signature")){
 
-        }
-        else {
+        }else {
             startActivity(Intent(this@RazorpayActivity, HomeActivity::class.java))
-
         }
         finish()
     }
