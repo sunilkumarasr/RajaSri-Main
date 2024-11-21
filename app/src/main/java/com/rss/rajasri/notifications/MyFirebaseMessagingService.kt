@@ -56,11 +56,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         var body: String? = ""
         var id: String? = ""
          //var context: Context
-
-
-
     }
-
 
     override fun onMessageReceived(p0: RemoteMessage) {
         super.onMessageReceived(p0)
